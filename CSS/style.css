@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #ff044b;
+  --color-header: rgb(228, 218, 181);
   --color-primary-light: #7fd8ee;
   --color-primary-dark: #1c8fdb;
   --color-grey-light-1: #faf9f9;
@@ -52,7 +52,8 @@ li,
 button,
 label,
 input,
-p {
+p,
+a {
   font-size: var(--header-smallest);
 }
 
@@ -91,5 +92,168 @@ a {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.main-header {
+  background: var(--color-header);
+  -webkit-box-shadow: var(--shadow-dark);
+          box-shadow: var(--shadow-dark);
+  z-index: 2;
+  position: relative;
+}
+
+.main-header nav {
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-header nav #logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+}
+
+.main-header nav .nav-bar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 5rem;
+          flex: 1 1 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hero {
+  min-height: 90vh;
+  width: 100%;
+  margin: 0 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero .hero-introduction {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 40rem;
+          flex: 2 1 40rem;
+  text-align: center;
+}
+
+.hero .hero-introduction h2,
+.hero .hero-introduction p {
+  padding: 4rem 3rem;
+}
+
+.hero .hero-introduction a {
+  border: 0.3rem solid black;
+  margin: 5rem;
+  margin-bottom: 5rem;
+  padding: 4rem 3rem;
+}
+
+.hero-images {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dad194), to(#dad18c));
+  background: linear-gradient(#dad194, #dad18c);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 0;
+}
+
+.hamburger,
+.menu-check {
+  display: none;
+}
+
+@media screen and (max-width: 860px) {
+  .hamburger {
+    position: relative;
+    display: block;
+  }
+  .hamburger span {
+    padding: 0.2rem 2rem;
+    margin: 0.5rem 2rem;
+    display: block;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: var(--color-grey-dark-1);
+  }
+  .nav-bar {
+    background: var(--color-grey-dark-1);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+  }
+  .nav-bar a {
+    font-size: var(--text-largest);
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+  .menu-check {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    -webkit-transform: translate(-25%, -50%);
+            transform: translate(-25%, -50%);
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10;
+  }
+  .menu-check:checked + .nav-bar {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  .menu-check:checked ~ .hamburger span {
+    background: white;
+  }
+  .menu-check:checked ~ .hamburger span:nth-child(1) {
+    -webkit-transform: rotateZ(45deg) translateY(300%);
+            transform: rotateZ(45deg) translateY(300%);
+  }
+  .menu-check:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-check:checked ~ .hamburger span:nth-child(3) {
+    -webkit-transform: rotateZ(-45deg) translateY(-300%);
+            transform: rotateZ(-45deg) translateY(-300%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
