@@ -34,38 +34,48 @@
     <!-- HEADER SECTION -->
     <header class="main-header">
       <nav>
-        <h1 class="logo">FoodoGraphy&copy;</h1>
+        <h1 id="logo">FoodoGraphy&copy;</h1>
+        <input type="checkbox" class="menu-check" />
+
         <ul class="nav-bar">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <!-- <div class="menu-btn">
+          <div class="menu-btn__burger"></div>
+        </div> -->
+        <!-- hamburger -->
+        <div class="hamburger">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
       </nav>
     </header>
 
     <!-- HERO SECTION -->
     <main>
       <section class="hero">
-        <div class="hero-introduction">
+        <div class="hero-introduction flex-center">
           <h2>
-            FoodoGrapher <br />
+            FoodoGrapher&copy; <br />
             The food photography
           </h2>
+
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe ut
             nemo numquam assumenda porro aperiam incidunt, minus repellendus?
             Nihil fugit rem expedita quod. Itaque a dolor, nihil suscipit
             excepturi assumenda!
           </p>
+
           <a href="#gallery">Food Gallery</a>
         </div>
 
         <div class="hero-images">
-          <img
-            class="photographer"
-            src="img/photographer-1.jpeg"
-            alt="photo of Photograher"
-          />
+          <img src="img/photographer-1.jpeg" alt="photo of Photograher" />
         </div>
       </section>
     </main>
