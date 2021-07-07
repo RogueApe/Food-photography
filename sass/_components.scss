@@ -3,6 +3,27 @@
   display: none;
 }
 
+// HAMBURGER
+// for JavaScript classes (Nav bar)
+.nav-open {
+  transform: translate(-100%);
+}
+
+.toggle .line1 {
+  transform: rotateZ(45deg) translateY(300%);
+  background: var(--color-white);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotateZ(-45deg) translateY(-300%);
+  background: var(--color-white);
+}
+
+// MOBILE RESPONSIVE
 @media screen and (max-width: 860px) {
   .hamburger {
     position: relative;
@@ -15,26 +36,6 @@
       display: block;
       transition: all 0.5s ease;
       background: var(--color-grey-dark-1);
-    }
-
-    // HAMBURGER
-    // for JavaScript classes (Nav bar)
-    .nav-open {
-      transform: translate(-100%);
-    }
-
-    .toggle .line1 {
-      transform: rotateZ(45deg) translateY(300%);
-      background: var(--color-white);
-    }
-
-    .toggle .line2 {
-      opacity: 0;
-    }
-
-    .toggle .line3 {
-      transform: rotateZ(-45deg) translateY(-300%);
-      background: var(--color-white);
     }
   }
 }
