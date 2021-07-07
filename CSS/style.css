@@ -37,6 +37,7 @@ html {
   --text-largest: calc(3.5rem + 1.2vw);
   --background-color: #414141;
   --gray-text: #525252;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -189,11 +190,6 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   margin-left: 0;
-}
-
-.hamburger,
-.menu-check {
-  display: none;
 }
 
 #about {
@@ -462,49 +458,6 @@ footer ul {
     color: var(--color-white);
     text-decoration: underline;
   }
-  .hamburger {
-    position: relative;
-    display: block;
-  }
-  .hamburger span {
-    padding: 0.2rem 2rem;
-    margin: 0.5rem 2rem;
-    display: block;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    background: var(--color-grey-dark-1);
-  }
-  .menu-check {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    -webkit-transform: translate(-25%, -50%);
-            transform: translate(-25%, -50%);
-    width: 6rem;
-    height: 6rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 10;
-  }
-  .menu-check:checked + .nav-bar {
-    -webkit-transform: translate(-100%);
-            transform: translate(-100%);
-  }
-  .menu-check:checked ~ .hamburger span {
-    background: white;
-  }
-  .menu-check:checked ~ .hamburger span:nth-child(1) {
-    -webkit-transform: rotateZ(45deg) translateY(300%);
-            transform: rotateZ(45deg) translateY(300%);
-  }
-  .menu-check:checked ~ .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-check:checked ~ .hamburger span:nth-child(3) {
-    -webkit-transform: rotateZ(-45deg) translateY(-300%);
-            transform: rotateZ(-45deg) translateY(-300%);
-  }
   .about-text div {
     padding: 2rem 2rem;
   }
@@ -539,5 +492,40 @@ footer ul {
   footer .year {
     font-size: 1.2rem;
   }
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+}
+
+.hamburger span {
+  padding: 0.2rem 2rem;
+  margin: 0.5rem 2rem;
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: var(--color-grey-dark-1);
+}
+
+.nav-open {
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+}
+
+.toggle .line1 {
+  -webkit-transform: rotateZ(45deg) translateY(300%);
+          transform: rotateZ(45deg) translateY(300%);
+  background: var(--color-white);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotateZ(-45deg) translateY(-300%);
+          transform: rotateZ(-45deg) translateY(-300%);
+  background: var(--color-white);
 }
 /*# sourceMappingURL=style.css.map */
