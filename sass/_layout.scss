@@ -79,11 +79,6 @@
   }
 }
 
-.hamburger,
-.menu-check {
-  display: none;
-}
-
 // ABOUT SECTION
 #about {
   min-height: 100vh;
@@ -309,54 +304,7 @@ footer {
     }
   }
 
-  // HAMBURGER
-  .hamburger {
-    position: relative;
-    display: block;
-  }
-
-  .hamburger span {
-    padding: 0.2rem 2rem;
-    margin: 0.5rem 2rem;
-    display: block;
-    transition: all 0.5s ease;
-    background: var(--color-grey-dark-1);
-  }
-
-  .menu-check {
-    display: block;
-
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(-25%, -50%);
-    width: 6rem;
-    height: 6rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 10;
-  }
-
-  .menu-check:checked + .nav-bar {
-    transform: translate(-100%);
-  }
-
-  .menu-check:checked ~ .hamburger span {
-    background: white;
-  }
-
-  .menu-check:checked ~ .hamburger span:nth-child(1) {
-    transform: rotateZ(45deg) translateY(300%);
-  }
-
-  .menu-check:checked ~ .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-check:checked ~ .hamburger span:nth-child(3) {
-    transform: rotateZ(-45deg) translateY(-300%);
-  }
-
+  // ABOUT SECTION
   .about-text {
     div {
       padding: 2rem 2rem;
